@@ -22,7 +22,7 @@ html {
     --light-blue-hover: #65E9E4;
     --light-yellow: #F2B137;
     --light-yellow-hover: #FFC860;
-    --border-radius: .5rem;
+    --border-radius: .8rem;
 }
 
 body {
@@ -36,19 +36,20 @@ img {
     height: auto;
 }
 
+/* new game */
+
 .new-game {
     background: var(--dark-navy);
     min-height: 100vh;
     width: 100%;
-    padding: 10rem 0;
+    padding: 6rem 0;
 }
 
 .new-game-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 35rem;
+    width: 40rem;
     height: 100%;
     margin: 0 auto;
     padding: 5rem 0;
@@ -59,32 +60,17 @@ img {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: .5rem;
+    gap: 1rem;
     margin-bottom: 1rem;
 }
 
-.menu-icons .x,
-.menu-icons .o {
-    font-size: 2rem;
-    font-weight: 800;
-}
-
-.menu-icons .x {
-    color: var(--light-blue);
-}
-
-.menu-icons .o {
-    color: var(--light-yellow);
-}
-
-.new-game-menu .player-select {
+.new-game .player-select {
     background: var(--semi-dark-navy);
     mix-blend-mode: lighten;
-    display: block;
-    padding: 1rem;
+    padding: 2rem 4%;
     width: 25rem;
     height: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     border-radius: var(--border-radius);
     box-shadow: 0px 5px 0px var(--dark-navy);
 }
@@ -93,6 +79,7 @@ img {
 .player-select h6 {
     color: var(--silver);
     text-align: center;
+    font-size: 1rem;
 }
 
 .player-select h6 {
@@ -102,42 +89,51 @@ img {
 .player-select .player-select-icons {
     background: var(--dark-navy);
     width: 100%;
-    height: 3.5rem;
+    height: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: .3rem;
+    justify-content: center;
+    padding: 10px .5rem;
     margin: .5rem 0;
     border-radius: var(--border-radius);
-}
-
-.player-select-icons .x-icon,
-.player-select-icons .o-icon {
-    width: 50%;
-    text-align: center;
-    font-weight: 900;
-    font-size: 2.2rem;
+    gap: .3rem;
 }
 
 .player-select-icons .x-icon {
-    color: var(--silver);
+    width: 50%;
+    background: var(--semi-dark-navy);
+    border-radius: var(--border-radius);
+}
+
+.player-select-icons .x-icon img {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 0;
 }
 
 .player-select-icons .o-icon {
+    width: 50%;
     background: var(--silver);
     border-radius: var(--border-radius);
 }
 
-.new-game-menu .menu-btns {
+.player-select-icons .o-icon img {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 0;
+}
+
+.new-game-menu .menu-btns a {
     width: 25rem;
     height: auto;
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
 }
 
 .menu-btns .btn {
-    height: 3rem;
+    height: 3.5rem;
     font-size: 1.2rem;
     font-weight: 800;
     text-transform: uppercase;
@@ -148,7 +144,290 @@ img {
     box-shadow: 0px 5px 0px var(--light-yellow);
 }
 
+.menu-btns .btn:hover,
+.menu-btns .btn:active {
+    background: var(--light-yellow-hover);
+}
+
 .menu-btns .pri {
     background: var(--light-blue);
     box-shadow: 0px 5px 0px var(--light-blue);
+    margin-top: 15px;
+}
+
+.menu-btns .pri:active,
+.menu-btns .pri:hover {
+    background: var(--light-blue-hover);
+}
+
+/* single player */
+.game-start {
+    width: 100%;
+    min-height: 100vh;
+    padding: 6rem 0;
+    background: var(--dark-navy);
+}
+
+.game-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 23%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    background: transparent;
+}
+
+.game-screen .game-screen-icons {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.game-screen-icons .turn-icon {
+    display: inline-flex;
+    gap: .8rem;
+    background: var(--semi-dark-navy);
+    border-radius: var(--border-radius);
+    padding: 8px 0rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.game-screen-icons .turn-icon:hover {
+    background: var(--dark-navy);
+}
+
+.game-screen-icons .turn-icon img {
+    width: 20%;
+}
+
+.game-screen-icons .turn-icon h6 {
+    color: var(--silver);
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.game-screen .game-screen-icons img:last-child {
+    background: var(--silver);
+    padding: 8px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.game-screen .game-screen-icons img:last-child:hover {
+    background: var(--silver-hover);
+}
+
+.game-screen .game-grid {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+
+.game-grid .game-grid-row {
+    display: flex;
+    flex-direction: row;
+    column-gap: .8rem;
+    margin-bottom: 10px;
+}
+
+.game-grid-row .box {
+    width: 110px;
+    height: 100px;
+    background: var(--semi-dark-navy);
+    border-radius: 1rem;
+    box-shadow: 0px 5px 0px var(--dark-navy);
+}
+
+.game-screen .score-board {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0;
+}
+
+.score-board .x-score-board,
+.score-board .ties-score-board,
+.score-board .o-score-board {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    padding: 5px 15px;
+    cursor: pointer;
+    height: 50px;
+}
+
+.score-board .x-score-board {
+    background: var(--light-blue);
+}
+
+.score-board .x-score-board:hover {
+    background: var(--light-blue-hover);
+}
+
+.score-board .ties-score-board {
+    background: var(--silver);
+}
+
+.score-board .ties-score-board:hover {
+    background: var(--silver-hover);
+}
+
+.score-board .o-score-board {
+    background: var(--light-yellow);
+}
+
+.score-board .o-score-board:hover {
+    background: var(--light-yellow-hover);
+}
+
+.score-board h6 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: var(--dark-navy);
+    font-weight: 600;
+}
+
+.score-board img {
+    width: 20%;
+}
+
+/* responsiveness */
+@media (max-width: 998px) {
+    .new-game-menu {
+        width: 100%;
+    }
+
+    .new-game-menu .menu-icons {
+        margin-bottom: 3rem;
+    }
+
+    .new-game .player-select {
+        margin-bottom: 2rem;
+        border-radius: 1.2rem;
+    }
+
+    .menu-btns .pri {
+        margin-top: 25px;
+    }
+
+    .game-start {
+        width: 100%;
+        padding: 8rem 10%;
+    }
+
+    .game-screen {
+        width: 100%;
+        padding: 20px 5%;
+    }
+
+    .game-screen .game-screen-icons {
+        width: 100%;
+        margin-bottom: 2.5rem;
+    }
+
+    .game-screen-icons .turn-icon {
+        padding: 20px 20px;
+    }
+
+    .game-screen-icons .turn-icon img {
+        width: 25%;
+    }
+
+    .game-screen-icons .turn-icon h6 {
+        font-size: 1.7rem;
+    }
+
+    .game-screen .game-screen-icons img:first-child {
+        width: 25%;
+    }
+
+    .game-screen .game-screen-icons img:last-child {
+        padding: 25px;
+    }
+
+    .game-grid .game-grid-row {
+        column-gap: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .game-grid-row .box {
+        width: 100%;
+        height: 150px;
+        border-radius: 1.5rem;
+    }
+
+    .score-board .x-score-board,
+    .score-board .ties-score-board,
+    .score-board .o-score-board {
+        width: 100%;
+        height: 80px;
+        border-radius: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .new-game-menu {
+        width: 100%;
+    }
+
+    .new-game-menu .menu-icons {
+        margin-bottom: 3rem;
+    }
+
+    .new-game .player-select {
+        margin-bottom: 2rem;
+    }
+
+    .menu-btns .pri {
+        margin-top: 25px;
+    }
+
+    .game-screen {
+        width: 100%;
+        padding: 20px 6%;
+    }
+
+    .game-screen .game-screen-icons {
+        margin-bottom: 3rem;
+    }
+
+    .game-grid .game-grid-row {
+        column-gap: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .game-grid-row .box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .new-game {
+        padding: 0 50px;
+    }
+
+    .game-start {
+        padding: 0;
+    }
+
+    .game-screen {
+        padding: 20px 4%;
+    }
 }

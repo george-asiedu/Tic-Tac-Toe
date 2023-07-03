@@ -5,28 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
 </head>
 <body>
-    <div class="new-game">
+    <main class="new-game">
         <div class="new-game-menu">
             <div class="menu-icons">
-                <div class="x">X</div>
-                <div class="o">O</div>
+                <img src="assets/logo.svg" alt="">
             </div>
             <div class="player-select">
                 <h5>PICK PLAYER 1'S MARK</h5>
                 <div class="player-select-icons">
-                    <div class="x-icon">x</div>
-                    <div class="o-icon">O</div>
+                    <div class="x-icon" id="x-icon">
+                        <img src="assets/icon-x-silver.svg" alt="">
+                    </div>
+                    <div class="o-icon" id="o-icon">
+                        <img src="assets/icon-o-dark-navy.svg" alt="">
+                    </div>
                 </div>
                 <h6>REMEMBER : X GOES FIRST</h6>
             </div>
             <div class="menu-btns">
-                <button class="btn">new game (vs cpu)</button>
-                <button class="btn pri">new game (vs player)</button>
+                <a href="single.html">
+                    <button class="btn">new game (vs cpu)</button>
+                </a>
+                <a href="multiplayer.html">
+                    <button class="btn pri">new game (vs player)</button>
+                </a>
             </div>
         </div>
-    </div>
+    </main>
 
 
     <script src="app.js"></script>
