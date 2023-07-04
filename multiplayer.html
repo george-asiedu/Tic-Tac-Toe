@@ -3,56 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player VS Player</title>
+    <title>Multiplayer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" sizes="32x32" type="image/png" href="assets/favicon-32x32.png">
 </head>
 <body>
-    <main class="game-start">
-        <div class="game-screen">
-            <div class="game-screen-icons">
-                <img src="assets/logo.svg" alt="">
-                <div class="turn-icon">
-                    <img src="assets/icon-x-silver.svg" alt="">
-                    <h6>turn</h6>
-                </div>
-                <img src="assets/icon-restart.svg" alt="">
-            </div>
+    <div class="game-screen">
+        <div class="game-screen-icons">
+            <img src="assets/logo.svg" alt="">
+            <div class="turn"><p>x turn</p></div>
+            <img src="assets/icon-restart.svg" alt="">
+        </div>
 
-            <div class="game-grid">
-                <div class="game-grid-row">
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                </div>
-                <div class="game-grid-row">
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                </div>
-                <div class="game-grid-row">
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                </div>
-            </div>
+        <div class="game-board">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>   
 
-            <div class="score-board">
-                <div class="x-score-board">
-                    <h6>x(you)</h6>
-                    <img src="assets/icon-o-dark-navy.svg" alt="">
-                </div>
-                <div class="ties-score-board">
-                    <h6>ties</h6>
-                    <img src="assets/icon-o-dark-navy.svg" alt="">
-                </div>
-                <div class="o-score-board">
-                    <h6>o(cpu)</h6>
-                    <img src="assets/icon-o-dark-navy.svg" alt="">
-                </div>
+        <div class="score-board">
+            <div class="x-score-board">
+                <h6>x(p1)</h6>
+                <p>0</p>
+            </div>
+            <div class="ties-score-board">
+                <h6>ties</h6>
+                <p>0</p>
+            </div>
+            <div class="o-score-board">
+                <h6>o(p2)</h6>
+                <p>0</p>
             </div>
         </div>
-    </main>
+    </div>
 
 
 
